@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResidenceComponent } from './residence/residence.component';
 import { FormsModule } from '@angular/forms';
+import { FormResidenceComponent } from './form-residence/form-residence.component';
+import { FormApartmentComponent } from './form-apartment/form-apartment.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -12,6 +15,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     ResidenceComponent,
+    FormResidenceComponent,
+    FormApartmentComponent,
+    NotFoundComponent,
 
 
   ],
