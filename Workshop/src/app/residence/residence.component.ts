@@ -5,7 +5,7 @@ import { Apartment } from 'src/core/models/apartment';
 @Component({
   selector: 'app-residence',
   templateUrl: './residence.component.html',
-  styleUrls: ['./residence.component.css']
+  styleUrls: ['./residence.component.css'],
 })
 export class ResidenceComponent {
   listResidences: Residence[] = [
@@ -69,4 +69,26 @@ export class ResidenceComponent {
       residence: this.listResidences[1],
     },
   ];
+  selectedResidence: Residence | null = null;
+  surfaceFilter: number | null = null;
+
+  showApartments(residence: Residence): void {
+    this.selectedResidence = residence;
+    this.surfaceFilter = null;
+    
+  }
+
+  getApartments(residence: Residence): Apartment[] {
+    let filteredApartments = this.listApartments.filter(
+      (apartment) => apartment.residence.id === residence.id
+    );
+     ///////////////////
+     if (this.surfaceFilter !== null) {
+      filteredApartments = filteredApartments.filter(
+        (apartment) => apartment.surface === this.surfaceFilter
+      );
+    }
+    return filteredApartments;
+  }
+  
 }

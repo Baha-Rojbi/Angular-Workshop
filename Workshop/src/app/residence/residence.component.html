@@ -22,10 +22,29 @@
                 <td>{{residence.name}}</td>
                 <td>{{residence.address}}</td>
                 <td><img src="{{residence.image}}" alt="Residence image"></td>
-                
+                <td><button (click)="showApartments(residence)">Show Apartments</button></td>
             </tr>
             
         </tbody>
     </table>
+    
+    <div *ngIf="selectedResidence">
+        <h2>Apartments for {{selectedResidence.name}}</h2>
+        <input type="number" placeholder="Enter surface area" [(ngModel)]="surfaceFilter">
+        <ul>
+            <li *ngFor="let apartment of getApartments(selectedResidence)">
+                <h3>{{apartment.description}}</h3>
+                <p>Appartment Number: {{apartment.appartNum}}</p>
+                <p>Floor Number: {{apartment.floorNum}}</p>
+                <p>Surface: {{apartment.surface}}</p>
+                <p>Terrace: {{apartment.terrace ? 'Yes' : 'No'}}</p>
+                <p>Surface of Terrace: {{apartment.surfaceTerrace}} </p>
+                <p>Category: {{apartment.category}}</p>
+            </li>
+        </ul>
+        
+    </div>
+    
 </body>
+
 </html>
