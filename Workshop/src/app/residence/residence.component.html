@@ -9,6 +9,8 @@
 
 <body>
     <h1>Liste des residences</h1>
+   
+    
     <table>
         <thead>
             <tr>
@@ -27,6 +29,21 @@
             
         </tbody>
     </table>
+    <div>
+        <h2>ajouter une residence</h2>
+        <form (ngSubmit)="addResidence()">
+          <label for="name">Name:</label>
+          <input id="name" type="text" [(ngModel)]="newResidenceForm.name" name="name" required>
+      
+          <label for="address">Address:</label>
+          <input id="address" type="text" [(ngModel)]="newResidenceForm.address" name="address" required>
+      
+          <label for="image">Image URL:</label>
+          <input id="image" type="text" [(ngModel)]="newResidenceForm.image" name="image" required>
+      
+          <button type="submit">Add Residence</button>
+        </form>
+      </div>
     
     <div *ngIf="selectedResidence">
         <h2>Apartments for {{selectedResidence.name}}</h2>

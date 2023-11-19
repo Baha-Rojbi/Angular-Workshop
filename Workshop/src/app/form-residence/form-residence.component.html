@@ -1,1 +1,23 @@
-<p>form-residence works!</p>
+<!-- form-residence.component.html -->
+<form #residenceForm="ngForm" (ngSubmit)="addResidence(residenceForm)">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required>
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" ngModel required>
+  </div>
+  <div>
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" name="image" ngModel required>
+  </div>
+  <button type="submit">Add Residence</button>
+</form>
+
+<div *ngIf="newResidence">
+  <h2>New Residence Details:</h2>
+  <p>Name: {{ newResidence.name }}</p>
+  <p>Address: {{ newResidence.address }}</p>
+  <p>Image: <img [src]="newResidence.image" alt="{{ newResidence.name }}"></p>
+</div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Residence } from 'src/core/models/residence';
 import { Apartment } from 'src/core/models/apartment';
+import { ResidenceForm } from 'src/core/models/residenceForm';
 
 @Component({
   selector: 'app-residence',
@@ -89,6 +90,19 @@ export class ResidenceComponent {
       );
     }
     return filteredApartments;
+  }
+  newResidenceForm: ResidenceForm = new ResidenceForm();
+
+  addResidence(): void {
+    const newResidence: Residence = {
+      id: this.listResidences.length + 1,
+      name: this.newResidenceForm.name,
+      address: this.newResidenceForm.address,
+      image: this.newResidenceForm.image,
+    };
+
+    this.listResidences.push(newResidence);
+    this.newResidenceForm = new ResidenceForm(); // Clear the form after adding a residence
   }
   
 }
