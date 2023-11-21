@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { FormApartmentComponent } from './form-apartment/form-apartment.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
+import { DetailApartmentComponent } from './detail-apartment/detail-apartment.component';
+import { ApartmentComponent } from './apartment/apartment.component';
 
 
 
@@ -17,7 +19,9 @@ import { FormResidenceComponent } from './form-residence/form-residence.componen
     ResidenceComponent,
     FormApartmentComponent,
     NotFoundComponent,
-    FormResidenceComponent
+    FormResidenceComponent,
+    DetailApartmentComponent,
+    ApartmentComponent
   ],
   imports: [
     BrowserModule,
