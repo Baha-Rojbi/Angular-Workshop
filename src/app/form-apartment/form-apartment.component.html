@@ -1,4 +1,4 @@
-<form [formGroup]="apartmentForm">
+<form [formGroup]="apartmentForm" >
     <label>Apartment Number :
         <input type="text" formControlName="apartmentNumber">
         <div *ngIf="apartmentForm.get('apartmentNumber')?.hasError('required') && apartmentForm.get('apartmentNumber')?.touched">
@@ -57,5 +57,5 @@
     <label>Residence : 
         <input type="text" formControlName="residence">
     </label><br>
-    <input type="submit" value="Add">
+    <button type="submit" [disabled]="apartmentForm.invalid">Add</button>
 </form>
