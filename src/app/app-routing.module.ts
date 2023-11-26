@@ -7,11 +7,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailApartmentComponent } from './detail-apartment/detail-apartment.component';
 import { Apartment } from 'src/core/models/apartment';
 import { ApartmentComponent } from './apartment/apartment.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {path: 'home', component: ResidenceComponent}, 
 {path: 'addResidence',component:  FormResidenceComponent },
 {path: 'addApartment',component:  FormApartmentComponent },
+{path: 'user',component:  UserComponent },
 {path:'residence/:id',component:ApartmentComponent},
 {path:'apartment/:id',component:DetailApartmentComponent},
 

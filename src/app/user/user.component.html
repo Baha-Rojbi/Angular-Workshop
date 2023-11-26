@@ -1,0 +1,18 @@
+username:<input type="text" [formControl]="username"><br>
+Value:{{username.value}}<br>
+Touched:{{username.touched}}<br>
+Dirty:{{username.dirty}}<br>
+<button (click)="textAdd()">Add</button>
+<form [formGroup]="userForm" (ngSubmit)="textAdd1()">
+    <input type="text" formControlName="firstName"><br>
+    <input type="text" formControlName="lastName"><br>
+    <div *ngIf="lastName.invalid && (lastName.touched || lastName.dirty)">
+        <div *ngIf="lastName.errors!['required']">Last Name is required</div>
+        <div *ngIf="lastName.errors!['minlength']">Last Name is short</div>
+    </div>
+    <div formGroupName="address">
+        <input type="text" formControlName="city"><br>
+        <input type="text" formControlName="street"><br>
+    </div>
+    <input type="submit" value="add">
+</form>
