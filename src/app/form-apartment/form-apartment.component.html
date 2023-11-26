@@ -1,1 +1,35 @@
-<p>Ajouter un appartement</p>
+<form [formGroup]="apartmentForm">
+    <label>Apartment Number :
+        <input type="text" formControlName="apartmentNumber">
+    </label><br>
+    <label>Flour Number :
+        <input type="text" formControlName="flourNumber"></label><br>
+    <label>Surface :
+        <input type="text" formControlName="surface"></label><br>
+    <label>Terrace :
+        <input type="radio" value="yes" formControlName="terrace" (change)="onTerraceChange()"> Yes
+    <input type="radio" value="no" formControlName="terrace" (change)="onTerraceChange()"> No
+    </label><br>
+    <label *ngIf="apartmentForm.get('terrace')?.value === 'yes'">
+        Surface Terrace:
+        <input type="text" formControlName="surfaceTerrace">
+      </label><br>
+    <label>Category :
+        <label>
+            <input type="radio" value="S+1" formControlName="category"> S+1
+        </label>
+        <label>
+            <input type="radio" value="S+2" formControlName="category"> S+2
+        </label>
+        <label>
+            <input type="radio" value="S+3" formControlName="category"> S+3
+        </label></label><br>
+    <label>
+        Description :
+        <textarea formControlName="description"></textarea>
+    </label><br>
+    <label>Residence : 
+        <input type="text" formControlName="residence">
+    </label><br>
+    <input type="submit" value="Add">
+</form>
