@@ -1,11 +1,28 @@
 <form [formGroup]="apartmentForm">
     <label>Apartment Number :
         <input type="text" formControlName="apartmentNumber">
+        <div *ngIf="apartmentForm.get('apartmentNumber')?.hasError('required') && apartmentForm.get('apartmentNumber')?.touched">
+            Apartment Number is required.
+          </div>
+          <div *ngIf="apartmentForm.get('apartmentNumber')?.hasError('pattern') && apartmentForm.get('apartmentNumber')?.touched">
+            Please enter only numbers for Apartment Number.
+          </div>
     </label><br>
     <label>Flour Number :
-        <input type="text" formControlName="flourNumber"></label><br>
+        <input type="text" formControlName="floorNumber">
+        <div *ngIf="apartmentForm.get('floorNumber')?.hasError('required') && apartmentForm.get('floorNumber')?.touched">
+            Floor Number is required.
+          </div>
+          <div *ngIf="apartmentForm.get('floorNumber')?.hasError('pattern') && apartmentForm.get('floorNumber')?.touched">
+            Please enter only numbers for Floor Number.
+          </div>
+    </label><br>
     <label>Surface :
-        <input type="text" formControlName="surface"></label><br>
+        <input type="text" formControlName="surface">
+        <div *ngIf="apartmentForm.get('surface')?.hasError('required') && apartmentForm.get('surface')?.touched">
+            Surface is required.
+          </div>
+    </label><br>
     <label>Terrace :
         <input type="radio" value="yes" formControlName="terrace" (change)="onTerraceChange()"> Yes
     <input type="radio" value="no" formControlName="terrace" (change)="onTerraceChange()"> No
@@ -13,6 +30,9 @@
     <label *ngIf="apartmentForm.get('terrace')?.value === 'yes'">
         Surface Terrace:
         <input type="text" formControlName="surfaceTerrace">
+        <div *ngIf="apartmentForm.get('surfaceTerrace')?.hasError('required') && apartmentForm.get('surfaceTerrace')?.touched">
+            Surface Terrace is required.
+          </div>
       </label><br>
     <label>Category :
         <label>
@@ -27,6 +47,12 @@
     <label>
         Description :
         <textarea formControlName="description"></textarea>
+        <div *ngIf="apartmentForm.get('description')?.hasError('required') && apartmentForm.get('description')?.touched">
+            Description is required.
+          </div>
+          <div *ngIf="apartmentForm.get('description')?.hasError('minlength') && apartmentForm.get('description')?.touched">
+            Description must be at least 10 characters long.
+          </div>
     </label><br>
     <label>Residence : 
         <input type="text" formControlName="residence">

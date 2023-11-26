@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FormApartmentComponent {
   apartmentForm=new FormGroup({
     apartmentNumber: new FormControl('',[Validators.required, Validators.pattern(/^[0-9]+$/)]),
-    flourNumber: new FormControl('',[Validators.required, Validators.pattern(/^[0-9]+$/)]),
+    floorNumber: new FormControl('',[Validators.required, Validators.pattern(/^[0-9]+$/)]),
     surface: new FormControl('',[Validators.required]),
     terrace: new FormControl(''),
     surfaceTerrace: new FormControl({ value: '', disabled: true }, Validators.required),
