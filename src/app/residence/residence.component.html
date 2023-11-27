@@ -58,6 +58,7 @@
                 <p>Terrace: {{apartment.terrace ? 'Yes' : 'No'}}</p>
                 <p>Surface of Terrace: {{apartment.surfaceTerrace}} </p>
                 <p>Category: {{apartment.category}}</p>
+                <p><a [routerLink]="['/apartment',apartment.id]">Details</a></p>
             </li>
         </ul>
         

@@ -16,7 +16,6 @@ const routes: Routes = [
 {path: 'user',component:  UserComponent },
 {path:'residence/:id',component:ApartmentComponent},
 {path:'apartment/:id',component:DetailApartmentComponent},
-
 {path:'',redirectTo:'home',pathMatch:'full'},
 {path: '**',component:  NotFoundComponent }
 
