@@ -11,6 +11,7 @@ import { FormResidenceComponent } from './form-residence/form-residence.componen
 import { DetailApartmentComponent } from './detail-apartment/detail-apartment.component';
 import { ApartmentComponent } from './apartment/apartment.component';
 import { UserComponent } from './user/user.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -23,7 +24,8 @@ import { UserComponent } from './user/user.component';
     FormResidenceComponent,
     DetailApartmentComponent,
     ApartmentComponent,
-    UserComponent
+    UserComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

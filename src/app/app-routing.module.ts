@@ -8,13 +8,15 @@ import { DetailApartmentComponent } from './detail-apartment/detail-apartment.co
 import { Apartment } from 'src/core/models/apartment';
 import { ApartmentComponent } from './apartment/apartment.component';
 import { UserComponent } from './user/user.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path: 'home', component: ResidenceComponent}, 
 {path: 'addResidence',component:  FormResidenceComponent },
 {path: 'addApartment',component:  FormApartmentComponent },
 {path: 'user',component:  UserComponent },
-{path:'residence/:id',component:ApartmentComponent},
+{path: 'footer',component:  FooterComponent },
+{path:'residence/:id',component:FormApartmentComponent},
 {path:'apartment/:id',component:DetailApartmentComponent},
 {path:'',redirectTo:'home',pathMatch:'full'},
 {path: '**',component:  NotFoundComponent }

@@ -1,4 +1,4 @@
-<form [formGroup]="apartmentForm" >
+<form [formGroup]="apartmentForm" (ngSubmit)="addApartment(apartmentForm)" >
     <label>Apartment Number :
         <input type="text" formControlName="apartmentNumber">
         <div *ngIf="apartmentForm.get('apartmentNumber')?.hasError('required') && apartmentForm.get('apartmentNumber')?.touched">
@@ -55,7 +55,8 @@
           </div>
     </label><br>
     <label>Residence : 
-        <input type="text" formControlName="residence">
+        <input type="text" formControlName="residence" >
     </label><br>
-    <button type="submit" [disabled]="apartmentForm.invalid">Add</button>
+    <h1>{{residence}}</h1>
+    <button type="submit"  [disabled]="apartmentForm.invalid">Add</button>
 </form>
