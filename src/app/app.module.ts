@@ -12,6 +12,8 @@ import { DetailApartmentComponent } from './detail-apartment/detail-apartment.co
 import { ApartmentComponent } from './apartment/apartment.component';
 import { UserComponent } from './user/user.component';
 import { FooterComponent } from './footer/footer.component';
+import { EnseignantComponent } from './enseignant/enseignant.component';
+import { EtudiantComponent } from './etudiant/etudiant.component';
 
 
 
@@ -25,7 +27,9 @@ import { FooterComponent } from './footer/footer.component';
     DetailApartmentComponent,
     ApartmentComponent,
     UserComponent,
-    FooterComponent
+    FooterComponent,
+    EnseignantComponent,
+    EtudiantComponent
   ],
   imports: [
     BrowserModule,
