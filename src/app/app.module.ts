@@ -14,6 +14,9 @@ import { UserComponent } from './user/user.component';
 import { FooterComponent } from './footer/footer.component';
 import { EnseignantComponent } from './enseignant/enseignant.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 
@@ -35,7 +38,10 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatInputModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

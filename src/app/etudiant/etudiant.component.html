@@ -1,1 +1,14 @@
-<p>etudiant works!</p>
+
+    <h4 class="modal-title pull-left">Je suis l etudiant</h4><br>
+<p>La question de mon enseignant est :</p> <br>
+
+{{questionE}}
+
+<br>
+<br>
+      <mat-label>La Reponse est</mat-label>
+      <input type="text" [(ngModel)]="reponseE" matInput placeholder="" >
+    <button (click)="envoyerR()" mat-raised-button color="primary">Ok</button>
+
+  
+  {{reponseE}}

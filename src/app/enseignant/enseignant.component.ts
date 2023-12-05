@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class EnseignantComponent {
   question: string ="Angular est un framework?";
+  reponseCorrecte:string="TS"
+  message:string=""
+  verifReponse(reponse:string){
+    if(this.reponseCorrecte==reponse)
+      this.message="Correct"
+    else
+    this.message="Faux"
+  }
 }
