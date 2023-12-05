@@ -16,6 +16,7 @@ import { EnseignantComponent } from './enseignant/enseignant.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 
 
@@ -32,7 +33,8 @@ import {MatInputModule} from '@angular/material/input';
     UserComponent,
     FooterComponent,
     EnseignantComponent,
-    EtudiantComponent
+    EtudiantComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,

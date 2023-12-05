@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LogServiceService } from '../services/log-service.service';
 
 @Component({
   selector: 'app-enseignant',
@@ -6,13 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./enseignant.component.css']
 })
 export class EnseignantComponent {
+  constructor(private service:LogServiceService){
+  
+
+  }
   question: string ="Angular est un framework?";
   reponseCorrecte:string="TS"
   message:string=""
   verifReponse(reponse:string){
     if(this.reponseCorrecte==reponse)
-      this.message="Correct"
+      this.service.log("Vrai")
     else
-    this.message="Faux"
+    this.service.error("Faux")
   }
 }
