@@ -1,5 +1,5 @@
 # Workshop
-
+This is just a school workshop and my journey to learning Angular For further projects
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
 ## Development server
