@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class FooterComponent implements OnInit{
 
   p1="bonjour"
-  compteur = ""
+  compteur = "1"
   p3=""
 
 

@@ -1,15 +1,18 @@
 <form [formGroup]="apartmentForm" (ngSubmit)="addApartment(apartmentForm)" >
     <label>Apartment Number :
         <input type="text" formControlName="apartmentNumber">
+        <app-errors [errorMsg]="getErrorMessage('apartmentNumber')"></app-errors>
         <div *ngIf="apartmentForm.get('apartmentNumber')?.hasError('required') && apartmentForm.get('apartmentNumber')?.touched">
             Apartment Number is required.
           </div>
           <div *ngIf="apartmentForm.get('apartmentNumber')?.hasError('pattern') && apartmentForm.get('apartmentNumber')?.touched">
             Please enter only numbers for Apartment Number.
           </div>
+          
     </label><br>
     <label>Flour Number :
         <input type="text" formControlName="floorNumber">
+        <app-errors [errorMsg]="getErrorMessage('floorNumber')"></app-errors>
         <div *ngIf="apartmentForm.get('floorNumber')?.hasError('required') && apartmentForm.get('floorNumber')?.touched">
             Floor Number is required.
           </div>
@@ -19,6 +22,7 @@
     </label><br>
     <label>Surface :
         <input type="text" formControlName="surface">
+        <app-errors [errorMsg]="getErrorMessage('surface')"></app-errors>
         <div *ngIf="apartmentForm.get('surface')?.hasError('required') && apartmentForm.get('surface')?.touched">
             Surface is required.
           </div>

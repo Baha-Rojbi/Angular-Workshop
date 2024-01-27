@@ -105,4 +105,5 @@ export class ResidenceComponent {
     this.newResidenceForm = new ResidenceForm(); // Clear the form after adding a residence
   }
   
+  
 }

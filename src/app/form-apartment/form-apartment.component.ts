@@ -42,6 +42,13 @@ export class FormApartmentComponent implements OnInit{
           this.residence=params.get('id')
         })
     }
+    getErrorMessage(fieldName: string): string| null {
+      const control = this.apartmentForm.get(fieldName);
+      if (control?.errors?.['required']) {
+        return 'This field is required';
+      }
+      return null; // Vous pouvez ajouter d'autres messages d'erreur en fonction des erreurs possibles
+    }
   }
   
 

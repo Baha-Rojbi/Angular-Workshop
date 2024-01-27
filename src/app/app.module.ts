@@ -17,6 +17,8 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { ErrorsComponent } from './shared/errors/errors.component';
+import { HttpClientModule }  from '@angular/common/http'
 
 
 
@@ -34,7 +36,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     FooterComponent,
     EnseignantComponent,
     EtudiantComponent,
-    TodoListComponent
+    TodoListComponent,
+    ErrorsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     AppRoutingModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   
   ],
   providers: [],
